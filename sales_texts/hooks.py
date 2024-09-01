@@ -4,7 +4,34 @@ app_publisher = "PC-Giga / Florian Glashauser"
 app_description = "Custom sales texts in documents with templates"
 app_email = "service@pc-giga.de"
 app_license = "mit"
-# required_apps = []
+required_apps = ["erpnext"]
+
+fixtures = [
+    {
+        # Benutzerdefinierte Felder
+        "dt": "Custom Field",
+        "filters": [
+            {
+                "module": "SalesTexts"
+            }
+        ]
+    }
+]
+
+doc_events = {
+    "Quotation": {
+        "on_": "sales_texts.salestexts.doctype.sales_docs.sales_docs.insert_default_texts",
+    }
+}
+
+doctype_js = {
+    "Quotation" : "salestexts/doctype/sales_docs/sales_docs.js",
+    "Sales Order" : "salestexts/doctype/sales_docs/sales_docs.js",
+    "Sales Invoice" : "salestexts/doctype/sales_docs/sales_docs.js",
+    "Delivery Note" : "salestexts/doctype/sales_docs/sales_docs.js",
+    "Purchase Order" : "salestexts/doctype/sales_docs/sales_docs.js",
+    "Dunning" : "salestexts/doctype/sales_docs/sales_docs.js",
+}
 
 # Includes in <head>
 # ------------------

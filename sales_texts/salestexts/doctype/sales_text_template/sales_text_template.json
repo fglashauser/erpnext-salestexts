@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:title",
+ "creation": "2024-09-01 17:40:49.038902",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "template_doctype",
+  "text",
+  "is_default_introduction",
+  "is_default_final"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "text",
+   "fieldtype": "Text Editor",
+   "label": "Text"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default_introduction",
+   "fieldtype": "Check",
+   "label": "Is default Introduction Text",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default_final",
+   "fieldtype": "Check",
+   "label": "Is default Final Text",
+   "read_only": 1
+  },
+  {
+   "fieldname": "template_doctype",
+   "fieldtype": "Link",
+   "label": "Doctype",
+   "options": "DocType",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-01 19:35:53.994793",
+ "modified_by": "Administrator",
+ "module": "SalesTexts",
+ "name": "Sales Text Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
